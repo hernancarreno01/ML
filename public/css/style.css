@@ -1,4 +1,4 @@
-/* paleta de colores que voy a utilizar */
+
 :root {
     --Amarillo: #EAC926;
     --Azul: #03264C;
@@ -8,23 +8,22 @@
     --Verde: #39b54a;
 }
 
-/* MODIFICADORES GENERALES (BODY) */
-/* agregue tipo de fuente y tamaño */
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     background-color: #ebebeb;
 }
 
-/* -------------------------------------------------------- */
-/* MODIFICADORES DEL HEADER */
-/* color de dondo del header */
+
 header {
     background-color: #EAC926;
     padding:20px;
+    
 }
 .logo{
-    width: 50%;
+    display:flex;
+    width: 100%;
 }
 .compra-en-cuotas{
 
@@ -32,7 +31,7 @@ header {
     text-align: center;
 }
 
-/* modificando la barra de busqueda h2 y la lupa*/
+
 .busqueda-y-logo{
     display: flex;
     justify-content:space-between;
@@ -40,20 +39,23 @@ header {
 }
 .busqueda .espacio-buscador{
     width: 90%;
+    border-radius: 10px;
+        box-shadow: 0px 0px 10px rgb(124, 119, 119);
 }
 .busqueda{
     display: flex;
-    background-color: white;
-    border-radius: 5px;
+    border-radius: 60px;
     color:grey;
     font-weight: bold;
     margin-left: 3%;
     height: 50%;
-    box-shadow: #03264C;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
 }
-/* ocultar barra navegacion para mobile */
+.boton_buscar {
+    border-radius: 10px;
+}
+
+
+
 .barra_navegacion{
     display: none;
 
@@ -71,7 +73,7 @@ header {
     font-size: 16px;
 }
 
-/* conf del icono de menu en el header */
+
 
 .burger-menu{
     display: block;
@@ -87,11 +89,7 @@ header {
 }
 
     
-/* ----------------------------------------------------------- */
-/* MODIFICADORES DEL MAIN */
-/* tamaño de los titulares del main: 
-Basado en tu última vista, y Sección de Ofertas*/
-/* main del 90% */
+
 main {
     margin: auto;
     width: 90vw;
@@ -120,7 +118,7 @@ main {
     text-align: right;
     
 }
-/* para ubicarlos en la misma linea */
+
 .precio-descuento{
     display: flex;
     flex-wrap: wrap;
@@ -131,8 +129,7 @@ main {
 
 }
 
-/* tamaño de los precios, descuentos y descripciones dentro 
-del main*/
+
 .producto{
     border-top: 1px;
     border:solid #ebebeb 1px;
@@ -145,8 +142,7 @@ del main*/
     
 }
 
-/* display none porque en version mobile 
-no debe aparecer la descripcion */
+
 .nombre_producto{
     font-size: 16px;
     color:Grey;
@@ -169,7 +165,7 @@ main section {
     margin: auto;
 }
 
-/* modificador camioncito envio*/
+
 @keyframes giro{
     0%{  transform: rotateZ(0deg) }
     50%{  transform: rotateZ(-90deg) }
@@ -191,49 +187,41 @@ main section {
 } 
 
 
-
-
-
- 
-/* ----------------------------------------------------------- */
-/* MODIFICADORES DEL FOOTER */
-/* modificadores generales */
 footer {
     text-align: center;
     background-color: white;
     padding-top: 30px;
 }
 
-/* modificador de secciones */
+
 footer .pagos{
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 30px;
 }
 
-/* modificadores de imagenes */
+
 footer i {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #1259c3
 }
 
-/* modificando textos de opciones de pago */
+
 footer h4{
     margin-bottom: 2px;
 }
 
 
 
-/* modificador del copyright abajo */
+
 .marcaDeAgua {
     text-align: left;
     opacity: 0.5;
  }
 
  
-/* MEDIA QUIRES */
-/* para tablets */
+
 @media(min-width:361px){
     .nombre_producto{
         line-height: 24px;
@@ -261,7 +249,7 @@ footer h4{
     .barra_navegacion li{
         margin: 0px 3px;
     }
-    /* modificando el main */
+
     .articulos{
         width: 45%;
         background-color: white;
@@ -272,11 +260,14 @@ footer h4{
         flex-wrap:wrap;
         justify-content:space-around;
     }
-    
+    .arriba-barra-nav {
+        display: flex;
+        flex-direction: column;   
+    }
    
 }
 
-/* para compu */
+
 @media(min-width:769px){
 
     .arriba-barra-nav, .barra_navegacion{
@@ -295,10 +286,25 @@ footer h4{
     .busqueda{
         width: 100%;
     }
+    .logo{
+        display:flex;
+        width: 50%;
+    }
+
+    .arriba-barra-nav {
+        display: grid;
+        grid-template-columns: 40% 50% 10%;
+        grid-gap: 10px;
+    }
+
     .busqueda p{
         font-size: 16px;
     }
-     /* modificando el main */
+    .arriba-barra-nav {
+        display: flex;
+        flex-direction: row;   
+    }
+
      .articulos{
         width: 23%;
     }
@@ -308,8 +314,7 @@ footer h4{
         justify-content:space-around;
     }
 
-    /* para que la descripcion se muestre solo cuando
-     paso con el mouse */
+
     .nombre_producto{
         display: none;
     }
@@ -320,7 +325,7 @@ footer h4{
     .articulos:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    /* modificadores footer */
+  
     .orden-pagos{
         display:flex;
     }

@@ -7,11 +7,12 @@
     --Verde: #39b54a;
 }
 
-/* modificando el main */
+
 main{
     font-size: 16px;
     text-align: center;
     padding-top: 30px;
+    margin-top: 300px;
 
 }
 
@@ -37,4 +38,7 @@ main div{
 .input:hover{
     background-color: rgb(201, 200, 200);
 }
-
+header {
+    position: fixed;
+    z-index: 10;
+}
